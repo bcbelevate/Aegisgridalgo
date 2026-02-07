@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support | Aegis Grid Algo By BCB Elevate</title>
+    <meta name="description"
+        content="Get help with setting up Aegis Grid Algo and clear your doubts. Step-by-step connection guide and support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+
+    <header class="glass-header">
+        <nav class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Aegis Grid Algo <span
+                        style="font-weight:400; font-size: 0.8em; color: var(--text-muted);">By BCB Elevate</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="index.html#brokers">Brokers</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="help.html" class="active">Help</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="doc-section" style="padding-top: 120px; min-height: 80vh;">
+        <div class="container doc-layout">
+            <!-- Sidebar -->
+            <aside class="doc-sidebar">
+                <div class="sidebar-group active">
+                    <div class="group-header">
+                        <h3>Getting Started</h3>
+                        <span class="chevron">▼</span>
+                    </div>
+                    <ul>
+                        <li><a href="#connect" class="active">How to Connect</a></li>
+                        <li><a href="#vps">Get a VPS</a></li>
+                        <li><a href="#install">Install Algo</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-group active">
+                    <div class="group-header">
+                        <h3>Support</h3>
+                        <span class="chevron">▼</span>
+                    </div>
+                    <ul>
+                        <li><a href="#doubts">Clear Your Doubts</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="doc-content">
+                <div id="connect" class="content-block">
+                    <h1>How to Connect</h1>
+                    <p class="lead">Follow our step-by-step guide to connect the algo and start trading automatically.
+                    </p>
+
+                    <div class="glass-box step-box">
+                        <h3>Step 1: Open Your Broker Account</h3>
+                        <p>Ensure you have a live or demo MT5 account with one of our verified partner brokers (Exness,
+                            Alpari, etc.). Ideally, use a Cent account for better risk management if your capital is
+                            under $1000.</p>
+                    </div>
+
+                    <div id="vps" class="glass-box step-box">
+                        <h3>Step 2: Get a VPS</h3>
+                        <p>Purchase a VPS to keep your trading terminal online 24/7. This prevents missed trades due to
+                            power outages or internet loss.</p>
+                    </div>
+
+                    <div class="glass-box step-box">
+                        <h3>Step 3: Install MT5 on VPS</h3>
+                        <p>Log in to your VPS and install the MetaTrader 5 platform provided by your broker.</p>
+                    </div>
+
+                    <div id="install" class="glass-box step-box">
+                        <h3>Step 4: Load the Algo</h3>
+                        <p>Contact us to get the compiled algo file (.ex5). Place it in the `MQL5/Experts` folder,
+                            refresh the navigator, and drag the Aegis Grid Algo onto your XAUUSD chart.</p>
+                    </div>
+                </div>
+
+                <div id="doubts" class="content-block" style="margin-top: 4rem;">
+                    <h2>Clear Your Doubts</h2>
+                    <div class="glass-box">
+                        <p>Have specific questions or facing issues? Our support team is available to help you set up
+                            and resolve any doubts personally.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="http://wa.me/918848063402" target="_blank" class="help-btn">Chat on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>BCB Elevate</h3>
+                    <p>Professional automated trading solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BCB Elevate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

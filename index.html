@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis Grid Algo By BCB Elevate | Automate Your Trading Smarter</title>
+    <meta name="description"
+        content="Automate your trading with Aegis Grid Algo By BCB Elevate. Rule-driven algos for XAUUSD & major indices.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+
+    <header class="glass-header">
+        <nav class="container">
+            <div class="logo">Aegis Grid Algo <span
+                    style="font-weight:400; font-size: 0.8em; color: var(--text-muted);">By BCB Elevate</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="#brokers">Brokers</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <h1 class="fade-in">Automate Your Trading Smarter <br><span class="gradient-text">With Fully Automated
+                    Algos</span></h1>
+            <p class="fade-in delay-1">Rule-driven design built around clear market-structure rules, not black-box
+                guessing.</p>
+            <div class="hero-buttons fade-in delay-2">
+                <a href="#pricing" class="btn btn-primary" id="get-access-btn">Get Access</a>
+                <a href="https://www.youtube.com/playlist?list=PL9y1mfBlY7LZE29bip7pcPUvl7ovuLqNt" target="_blank"
+                    class="btn btn-secondary">Live Performance</a>
+            </div>
+
+            <!-- New Stylish Feature Blocks -->
+            <div class="hero-features-grid fade-in delay-3">
+                <!-- Card 1: Free Access -->
+                <div class="hero-feature-card">
+                    <span class="feature-icon">🔓</span>
+                    <div class="feature-content">
+                        <h3>Free Access</h3>
+                        <p>No Upfront Payment<br><span class="highlight">Demo & Real Accounts</span></p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Low Barrier -->
+                <div class="hero-feature-card">
+                    <span class="feature-icon">📉</span>
+                    <div class="feature-content">
+                        <h3>Low Entry</h3>
+                        <p>Start trading with<br><strong>Just $100</strong></p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Daily Profits -->
+                <div class="hero-feature-card">
+                    <span class="feature-icon">💸</span>
+                    <div class="feature-content">
+                        <h3>Daily Profits</h3>
+                        <p><strong>$10 - $50</strong><br>Per Day Potential</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Rebate -->
+                <div class="hero-feature-card">
+                    <span class="feature-icon">🎁</span>
+                    <div class="feature-content">
+                        <h3>20% Rebate</h3>
+                        <p>Cashback Credited<br><strong>To Your Account</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Potential Returns Calculator -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-card glass-card-large fade-in">
+                <h2 class="calc-title">See Your Potential Returns</h2>
+                <p class="calc-subtitle">Based on verified Aegis Grid Algo performance data</p>
+
+                <div class="calc-modes">
+                    <button class="mode-btn" data-mode="aggressive" onclick="selectMode('aggressive')">
+                        <span class="mode-icon">🚀</span>
+                        <div class="mode-info">
+                            <strong>Aggressive Growth</strong>
+                            <span>High Risk • Fixed Capital</span>
+                        </div>
+                    </button>
+                    <button class="mode-btn active" data-mode="safe" onclick="selectMode('safe')">
+                        <span class="mode-icon">🛡️</span>
+                        <div class="mode-info">
+                            <strong>Safe Steady</strong>
+                            <span>Low Risk • Scalable</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="calc-input-area">
+                    <div class="input-header">
+                        <label>Starting Deposit</label>
+                        <span class="deposit-display" id="deposit-display">$1,000</span>
+                    </div>
+                    <input type="range" id="capital-slider" min="1000" max="50000" step="1000" value="1000"
+                        class="calc-slider">
+                    <div class="slider-labels">
+                        <span id="min-label">$1,000</span>
+                        <span id="max-label">$50,000</span>
+                    </div>
+                </div>
+
+                <div class="calc-results-box">
+                    <div class="result-row">
+                        <span>Hourly Net Profit</span>
+                        <strong id="hourly-profit">$1.23</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Daily Net Profit (22h)</span>
+                        <strong id="daily-profit">$27.10</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Weekly Net Profit (5 Days)</span>
+                        <strong id="weekly-profit">$135.52</strong>
+                    </div>
+
+                    <!-- Breakdown Section -->
+                    <div class="breakdown-divider"></div>
+                    <div class="result-row compact">
+                        <span>Monthly Gross Profit</span>
+                        <strong id="monthly-gross">$745.36</strong>
+                    </div>
+                    <div class="result-row compact deduction">
+                        <span>20% Profit Share</span>
+                        <strong id="monthly-deduction">-$149.07</strong>
+                    </div>
+                    <div class="result-row highlight">
+                        <span>Monthly Net Profit</span>
+                        <strong id="monthly-net">$596.29</strong>
+                    </div>
+                    <p class="disclaimer">Values shown are <strong>Net Profit</strong> after deducting 20% profit share.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Aegis Grid Algo?</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="icon">💰</div>
+                    <h3>Performance-Based Pricing</h3>
+                    <p>No upfront fees – we only earn when you profit, aligning our success with yours for a true
+                        win-win partnership!</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">📈</div>
+                    <h3>Daily Profit Potential</h3>
+                    <p>Designed to deliver solid returns in just one trading day, harnessing market moves for quick,
+                        consistent gains.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">🤖</div>
+                    <h3>Hands-Free Automation</h3>
+                    <p>Fully automated system that runs seamlessly without any manual tweaks – set it up once and let it
+                        trade intelligently for you!</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">💬</div>
+                    <h3>Fast Support</h3>
+                    <p>Quick setup and troubleshooting via WhatsApp or Direct Message.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rebates Section -->
+    <section class="rebates-highlight-section">
+        <div class="container">
+            <div class="rebate-hero-card glass-card-large fade-in">
+                <div class="rebate-grid">
+                    <div class="rebate-text-content">
+                        <span class="rebate-badge">Partner Exclusive</span>
+                        <h2 class="rebate-title">Performance-Based Rebates</h2>
+                        <h3 class="rebate-subtitle">Earn While You Trade!</h3>
+                        <p class="rebate-desc">Get <strong class="text-gold">20% cashback</strong> on commissions
+                            through our broker partnerships. We share our earnings directly with you—no upfront fees,
+                            just real rewards for your trading volume.</p>
+
+                        <div class="rebate-benefits">
+                            <div class="r-benefit">
+                                <span class="r-icon">💎</span>
+                                <div>
+                                    <strong>No Upfront Fees</strong>
+                                    <span>Zero cost to join</span>
+                                </div>
+                            </div>
+                            <div class="r-benefit">
+                                <span class="r-icon">🔄</span>
+                                <div>
+                                    <strong>Volume Rewards</strong>
+                                    <span>Earn on every trade</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rebate-visual-content">
+                        <div class="cashback-circle">
+                            <span class="cb-percent">20%</span>
+                            <span class="cb-label">Cashback</span>
+                        </div>
+                        <div class="floating-icon coin-1">💰</div>
+                        <div class="floating-icon coin-2">💰</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="product-section">
+        <div class="container">
+            <div class="product-showcase glass-card-large">
+                <div class="product-info">
+                    <span class="badge">Featured Product</span>
+                    <h2>Aegis Grid Algo v10.0</h2>
+                    <p class="product-desc">Advanced grid engine with adaptive risk controls and proven market
+                        resilience.</p>
+                    <ul class="product-specs">
+                        <li>✅ Adaptive Risk Controls</li>
+                        <li>✅ Built-in Stop/Close Rules</li>
+                        <li>✅ Recommended Capital Scaling</li>
+                    </ul>
+                    <div class="status-box">
+                        <span class="status-dot"></span> Fully Automated MT5 Trading Algo for XAUUSD
+                    </div>
+                </div>
+                <div class="product-visual">
+                    <!-- CSS Trading Dashboard Visual -->
+                    <div class="trading-card-visual">
+                        <div class="tc-header">
+                            <span class="pair-badge">XAUUSD</span>
+                            <span class="profit-badge">+12.5%</span>
+                        </div>
+                        <div class="chart-area">
+                            <!-- Simulated Chart Line (CSS Gradient/SVG) -->
+                            <svg viewBox="0 0 200 80" class="chart-line">
+                                <path
+                                    d="M0,70 L20,65 L40,68 L60,50 L80,55 L100,40 L120,45 L140,20 L160,25 L180,10 L200,5"
+                                    fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M0,70 L20,65 L40,68 L60,50 L80,55 L100,40 L120,45 L140,20 L160,25 L180,10 L200,5 V80 H0 Z"
+                                    fill="url(#gradient)" opacity="0.2" />
+                                <defs>
+                                    <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#22c55e" />
+                                        <stop offset="100%" stop-color="transparent" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <!-- Floating Data Points -->
+                            <div class="data-point p1"></div>
+                            <div class="data-point p2"></div>
+                            <div class="data-point p3"></div>
+                        </div>
+                        <div class="tc-stats">
+                            <div class="stat-item">
+                                <span class="label">Daily PnL</span>
+                                <span class="value text-green">+$458.20</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Trades</span>
+                                <span class="value">24</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Profit Factor</span>
+                                <span class="value text-blue">2.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Trading Plans & Pricing</h2>
+            <p class="section-subtitle">No initial payment fee. Unlimited demo access.</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card glass-card">
+                    <div class="plan-header">
+                        <h3>Aggressive Growth</h3>
+                        <div class="price">10%-50% <span>/ day</span></div>
+                    </div>
+                    <div class="plan-body">
+                        <p class="capital-req">Min Capital: <strong>$100</strong> <span
+                                class="small-text">(10,000&cent;)</span></p>
+                        <p class="account-type">Works on Cent Accounts</p>
+                        <p class="risk-label high-risk">High Risk Profile</p>
+                        <ul class="features-list">
+                            <li>Rapid account growth model</li>
+                            <li>High frequency trades</li>
+                            <li>Strict withdrawal rules</li>
+                        </ul>
+                        <button class="btn btn-primary full-width modal-trigger" data-modal="access-modal">Get
+                            Access</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card glass-card popular">
+                    <div class="popular-tag">Recommended</div>
+                    <div class="plan-header">
+                        <h3>Safe Steady</h3>
+                        <div class="price">1% - 5% <span>/ day</span></div>
+                    </div>
+                    <div class="plan-body">
+                        <p class="capital-req">Min Capital: <strong>$1000</strong> <span
+                                class="small-text">(100,000&cent;)</span></p>
+                        <p class="account-type">Works on Cent Accounts</p>
+                        <p class="risk-label safe-risk">Low Risk Profile</p>
+                        <ul class="features-list">
+                            <li>Consistent daily returns</li>
+                            <li>Capital preservation focus</li>
+                            <li>Compound growth strategy</li>
+                        </ul>
+                        <button class="btn btn-primary full-width modal-trigger" data-modal="access-modal">Get
+                            Access</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="pricing-footer">
+                <div class="profit-share-banner glass-card">
+                    <h3>Our Pricing Model</h3>
+                    <div class="share-rate">20%</div>
+                    <p>Flat Weekly Profit Share</p>
+                    <p class="small">We only make money when you make money.</p>
+                </div>
+
+                <div class="rebate-banner glass-card">
+                    <h3>Additional Benefit</h3>
+                    <div class="share-rate">20%</div>
+                    <p>Fixed Rebate</p>
+                    <p class="small">Credited back based on your activity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>Do I need a VPS to run this?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-body">
+                        <p>Yes. The Aegis Algo needs VPS without stopping. A VPS (Virtual Private Server) keeps the bot
+                            online and trading even if your computer is turned off or you lose internet.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>How much money do I need to start?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-body">
+                        <p>You can start with just $100.<br><br>
+                            We strongly recommend using a Cent Account. On a Cent Account, your $100 looks like 10,000
+                            cents to the broker. This helps the bot manage trades much better than on a standard
+                            account.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>What is the "Risky Plan" and how much should I invest?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-body">
+                        <p>The Risky Plan is a fast way to grow a small account. Because it is aggressive, do not put
+                            more than $100 into this plan. Think of this $100 as your "trading tool"—keep the amount
+                            small and manageable.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>When should I withdraw my profits?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-body">
+                        <p>You should withdraw often. The goal of the Risky Plan is to make profit quickly and take it
+                            out.<br><br>
+                            Our Rule: At the end of the day (or whenever you see good profit), withdraw that money to
+                            your bank or wallet. Keep your trading balance at $100 and take the rest out.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>How do I trade "Risk-Free"?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-body">
+                        <p>The goal is to get your original money back as fast as possible.<br><br>
+                            Usually, the bot can double your account (make $100 profit) in 1 to 3 days. As soon as you
+                            make that $100 profit, withdraw your original $100 immediately.<br><br>
+                            After that, you are trading only with the "house money" (your profits). If the bot wins, you
+                            win. If it loses, you didn't lose your own money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Partner Brokers Section -->
+    <section id="brokers" class="brokers-section">
+        <div class="container">
+            <h2 class="section-title">Our Partner Brokers</h2>
+            <p class="section-subtitle">Verified brokers for optimal performance</p>
+            <div class="brokers-grid">
+                <a href="https://one.exnesstrack.org/a/m88os7vczo" target="_blank" class="broker-card glass-card">
+                    <img src="exness.jpg" alt="Exness" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+                <a href="https://alpari.com/?Referral=72141" target="_blank" class="broker-card glass-card">
+                    <img src="alpari.png" alt="Alpari" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+                <a href="https://affs.click/mQJQM" target="_blank" class="broker-card glass-card">
+                    <img src="xm.png" alt="XM" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+                <a href="https://direct-fxpro.com/en/partner/26Z4TaNgL" target="_blank" class="broker-card glass-card">
+                    <img src="fxpro.png" alt="FxPro" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+                <a href="https://vigco.co/Jze2uu" target="_blank" class="broker-card glass-card">
+                    <img src="vantage.png" alt="Vantage" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+                <a href="https://partners.deriv.com/rx?sidc=A6F55045-C9B8-4F17-8961-B5CDAD3EFCAF&utm_campaign=dynamicworks&utm_medium=affiliate&utm_source=CU80859"
+                    target="_blank" class="broker-card glass-card">
+                    <img src="deriv.png" alt="Deriv" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+                <a href="https://www.startrader.com/live-account/?affid=NzQ1NTYwMg==&ibpRebateCode=NzQ1NTYwMlNUMTAwMTA="
+                    target="_blank" class="broker-card glass-card">
+                    <img src="startrader.png" alt="StarTrader" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+                <a href="https://headway.partners/user/signup?hwp=951190" target="_blank"
+                    class="broker-card glass-card">
+                    <img src="headway.png" alt="Headway" class="broker-logo">
+                    <span class="visit-link">Open Account →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Aegis Grid Algo</h3>
+                <p>Automated trading solutions by BCB Elevate.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#pricing">Pricing</a>
+                <a href="http://wa.me/918848063402" target="_blank">WhatsApp Support</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Have questions? Reach out directly.</p>
+                <a href="http://wa.me/918848063402" target="_blank" class="btn btn-secondary whatsapp-btn">
+                    <img src="whatsapp-logo.png" alt="WhatsApp" class="btn-icon"> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aegis Grid Algo By BCB Elevate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Access Modal -->
+    <div id="access-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+
+            <!-- Step 1: Selection -->
+            <div id="modal-step-1">
+                <h2>Choose Access Type</h2>
+                <div class="access-options">
+                    <button class="access-option-btn" data-type="Real Account">
+                        <span class="option-icon">🚀</span>
+                        <span class="option-title">Real Account Access</span>
+                        <span class="option-desc">Start trading with real capital</span>
+                    </button>
+                    <button class="access-option-btn" data-type="Demo Account">
+                        <span class="option-icon">🎮</span>
+                        <span class="option-title">Demo Account Access</span>
+                        <span class="option-desc">Test with virtual funds</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 1.5: Plan Selection -->
+            <div id="modal-step-plan" style="display: none;">
+                <h2>Choose Plan</h2>
+                <button class="back-btn" data-to="step-1">← Back</button>
+                <div class="access-options">
+                    <button class="plan-option-btn" data-plan="Aggressive Growth">
+                        <span class="option-icon">🔥</span>
+                        <span class="option-title">Aggressive Growth</span>
+                        <span class="option-desc">10% - 50% / Day</span>
+                    </button>
+                    <button class="plan-option-btn" data-plan="Safe Steady">
+                        <span class="option-icon">🛡️</span>
+                        <span class="option-title">Safe Steady</span>
+                        <span class="option-desc">1% - 2.5% / Day</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Form -->
+            <div id="modal-step-2" style="display: none;">
+                <h2 id="form-title">Enter Details</h2>
+                <button class="back-btn" data-to="step-plan">← Back</button>
+                <form id="access-form">
+                    <input type="hidden" id="access-type" name="access-type">
+                    <input type="hidden" id="plan-type" name="plan-type">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 234 567 8900">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mt5-id">MT5 Account ID</label>
+                        <input type="number" id="mt5-id" name="mt5-id" required placeholder="12345678">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="broker">Broker Server</label>
+                        <input type="text" id="broker" name="broker" required placeholder="Broker-Server">
+                        <p class="input-hint">⚠️ Must be exact (e.g., "BrokerName-Real"). Mistakes will prevent access.
+                        </p>
+                    </div>
+
+                    <div class="modal-warning-box">
+                        <span class="warning-icon">⚠️</span>
+                        <p><strong>Crucial:</strong> Double-check your <strong>Account ID</strong> and <strong>Broker
+                                Server</strong>. Any errors here will result in failed access.</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
