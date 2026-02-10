@@ -4,32 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Center | Aegis Grid Algo By BCB Elevate</title>
-    <meta name="description"
-        content="Find answers, tutorials, and support for Aegis Grid Algo. Search our help center or browse categories.">
+    <title>Risk Disclosure - Aegis Grid Algo</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="background-mesh"></div>
-
+    <!-- Navbar -->
+    <!-- Navbar -->
     <header class="glass-header">
         <nav class="container">
             <a href="index.html" class="logo" style="text-decoration: none;">Aegis Grid Algo <span
                     style="font-weight:400; font-size: 0.8em; color: var(--text-muted);">By BCB Elevate</span></a>
             <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reward.html">Rewards</a></li>
+                <li><a href="risk.html" class="active">Risks</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="index.html#brokers">Brokers</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-                <li><a href="help.html" class="active">Help</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
             </ul>
             <div class="mobile-toggle" id="mobile-toggle">
                 <span></span>
@@ -37,89 +32,120 @@
                 <span></span>
             </div>
         </nav>
-        <span></span>
-        <span></span>
-        </div>
-        </nav>
     </header>
 
-    <section class="help-hero">
+    <!-- Risk Hero -->
+    <section class="risk-hero">
+        <div class="container hero-content">
+            <span class="badge badge-warning fade-in">Transparency First</span>
+            <h1 class="fade-in delay-1">Understanding The <span class="gradient-text-red">Risks</span></h1>
+            <p class="fade-in delay-2">We believe in full transparency. High rewards come with risks, and knowing them
+                is your best defense.</p>
+        </div>
+    </section>
+
+    <!-- The $100 Reality -->
+    <section class="risk-details-section">
         <div class="container">
-            <h1 class="fade-in">How can we <span class="gradient-text">help you?</span></h1>
-            <div class="search-container fade-in delay-1">
-                <span class="search-icon">🔍</span>
-                <input type="text" class="help-search" placeholder="Search for answers, guides, or troubleshooting...">
+            <div class="risk-card glass-card-red fade-in delay-3">
+                <div class="risk-icon-wrapper">
+                    <span class="risk-icon">⚠️</span>
+                </div>
+                <h2>Aggressive Growth Plan: The $100 Capital Risk</h2>
+                <div class="risk-content">
+                    <p>Starting with a small capital of <strong>$100</strong> allows for easy entry, but it leaves very
+                        little room for market volatility. In extreme market conditions, this can lead to a
+                        <strong>Washout</strong> (loss of capital).
+                    </p>
+                    <p class="highlight-text-red"><strong>Important: This Washout risk is specific to the Aggressive
+                            Growth Plan due to the limited capital buffer.</strong></p>
+
+                    <div class="risk-scenario">
+                        <h3>If Washout Occurs:</h3>
+                        <p>Don't panic. This is a calculated possibility with small accounts.</p>
+                        <div class="recovery-steps">
+                            <div class="step-card">
+                                <span class="step-num">1</span>
+                                <p><strong>Re-Add Capital</strong><br>Deposit another $100 to restart the algo.</p>
+                            </div>
+                            <div class="step-card">
+                                <span class="step-num">2</span>
+                                <p><strong>Recover Losses</strong><br>The algo is designed to recover previous losses
+                                    using the new capital.</p>
+                            </div>
+                            <div class="step-card">
+                                <span class="step-num">3</span>
+                                <p><strong>Continue Growth</strong><br>Once recovered, it resumes generating daily
+                                    profits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safe Steady Plan Section -->
+            <div class="risk-card glass-card fade-in delay-4"
+                style="margin-top: 3rem; border-color: rgba(75, 192, 192, 0.5);">
+                <div class="risk-icon-wrapper" style="background: rgba(75, 192, 192, 0.1);">
+                    <span class="risk-icon">🛡️</span>
+                </div>
+                <h2>Safe Steady Plan: Protected Growth</h2>
+                <div class="risk-content">
+                    <p>Unlike the Aggressive Plan, the <strong>Safe Steady Plan</strong> is designed with a focus on
+                        capital preservation. By utilizing a larger capital base, this strategy effectively absorbs
+                        market volatility without the risk of a total washout.</p>
+
+                    <div class="risk-scenario">
+                        <h3>Safety Mechanisms:</h3>
+                        <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                            <li style="margin-bottom: 0.5rem;">✅ <strong>No Washout Risk:</strong> The strategy is built
+                                to avoid account liquidation.</li>
+                            <li style="margin-bottom: 0.5rem;">✅ <strong>Stop Loss Protection:</strong> We employ strict
+                                stop-loss protocols to limit deep drawdowns, ensuring your capital remains protected
+                                even during adverse market moves.</li>
+                        </ul>
+
+                        <div class="disclaimer-box"
+                            style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #4bc0c0; margin-top: 1.5rem;">
+                            <p style="margin: 0; font-size: 0.9em; color: var(--text-muted);">
+                                <strong>Disclaimer:</strong> While the Safe Steady Plan significantly minimizes risk,
+                                please remember that <strong>all trading involves market risk</strong>. Past performance
+                                is not indicative of future results. This plan prioritizes capital security and
+                                consistent long-term growth over rapid, high-risk gains.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common Issues / Disclaimer -->
+            <div class="disclaimer-grid fade-in delay-4">
+                <div class="disclaimer-card">
+                    <h3>📡 Internet Stability</h3>
+                    <p>The algo requires 24/7 internet. If your connection drops, trades may not close properly. We
+                        recommend using a VPS.</p>
+                </div>
+                <div class="disclaimer-card">
+                    <h3>🛑 Manual Interference</h3>
+                    <p>Do not manually close trades or modify settings. Interferred trades can disrupt the grid logic
+                        and
+                        cause losses.</p>
+                </div>
+                <div class="disclaimer-card">
+                    <h3>📉 Market Volatility</h3>
+                    <p>During major news events (NFP, CPI), markets can spike unpredictably. The algo handles most
+                        moves, but extreme events carry risk.</p>
+                </div>
+            </div>
+
+            <div class="action-area center-text fade-in delay-5">
+                <p>Ready to balance this risk with potential rewards?</p>
+                <a href="reward.html" class="btn btn-primary">See Potential Rewards →</a>
             </div>
         </div>
     </section>
 
-    <!-- Horizontal Categories Section (Moved Up) -->
-    <section class="help-categories" style="padding-top: 40px;">
-        <div class="container">
-            <h2 class="section-title">Browse by Topic</h2>
-            <div class="categories-grid">
-                <a href="guide.html#connect" class="category-card">
-                    <div class="category-icon">🚀</div>
-                    <h3>Getting Started</h3>
-                    <p>Complete guide to setting up your broker account, VPS, and installing the Aegis Algo.</p>
-                    <div class="category-arrow">Read Guide →</div>
-                </a>
-
-                <a href="guide.html#doubts" class="category-card">
-                    <div class="category-icon">💬</div>
-                    <h3>Support & FAQ</h3>
-                    <p>Have specific doubts? Connect with our team or troubleshoot common issues.</p>
-                    <div class="category-arrow">Get Support →</div>
-                </a>
-
-                <a href="guide.html" class="category-card">
-                    <div class="category-icon">📚</div>
-                    <h3>Documentation</h3>
-                    <p>Detailed breakdown of algo settings, risk management plans, and strategies.</p>
-                    <div class="category-arrow">View Docs →</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (Moved Down) -->
-    <section class="faq-section" style="padding-top: 20px;">
-        <div class="container">
-            <h2 class="section-title">Common Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item glass-card">
-                    <div class="faq-header">
-                        <h3>Do I need a VPS?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-body">
-                        <p>Yes. The Aegis Algo needs VPS without stopping. A VPS keeps the bot online even if your
-                            computer is off.</p>
-                    </div>
-                </div>
-                <div class="faq-item glass-card">
-                    <div class="faq-header">
-                        <h3>Minimum capital required?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-body">
-                        <p>You can start with $100 on a Cent Account (10,000 cents) for optimal risk management.</p>
-                    </div>
-                </div>
-                <div class="faq-item glass-card">
-                    <div class="faq-header">
-                        <h3>How to withdraw profits?</h3>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-body">
-                        <p>Withdraw often. Once you make profit (e.g., $100), withdraw your original capital to trade
-                            risk-free.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer id="contact">
         <div class="container footer-content">
             <div class="footer-col">

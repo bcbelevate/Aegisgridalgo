@@ -380,9 +380,9 @@ header nav {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -532,6 +532,19 @@ header nav {
 .safe-risk {
     background: #f0fdf4;
     color: #16a34a;
+}
+
+.medium-risk {
+    background: #fff7ed;
+    color: #ea580c;
+    /* Orange */
+}
+
+.extreme-risk {
+    background: #450a0a;
+    color: #fecaca;
+    /* Dark Red/Pink contrast */
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.2);
 }
 
 .features-list {
@@ -2593,4 +2606,225 @@ footer {
     color: #ef4444;
     margin-top: 0.25rem;
     font-weight: 500;
+}
+
+
+/* --- Risk vs Reward Navigation (Home) --- */
+.risk-reward-nav {
+    padding: 2rem 0;
+}
+
+.split-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nav-card {
+    display: block;
+    padding: 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    /* Glass base */
+    backdrop-filter: blur(10px);
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+}
+
+.reward-card {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.reward-card:hover {
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.6);
+}
+
+.risk-card {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.risk-card:hover {
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.6);
+}
+
+.nav-content {
+    text-align: center;
+}
+
+.nav-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.nav-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.nav-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.link-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.reward-card .link-text,
+.reward-card h3 {
+    color: #16a34a;
+}
+
+.risk-card .link-text,
+.risk-card h3 {
+    color: #dc2626;
+}
+
+@media (max-width: 768px) {
+    .split-nav-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* --- Risk Page Styles --- */
+.risk-hero,
+.reward-hero {
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.badge-warning {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.badge-success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.gradient-text-red {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.risk-card.glass-card-red {
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 4px solid #ef4444;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.risk-icon-wrapper {
+    background: rgba(254, 226, 226, 0.5);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.risk-scenario {
+    background: rgba(248, 250, 252, 0.8);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    border: 1px dashed #cbd5e1;
+}
+
+.recovery-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.step-card {
+    text-align: center;
+    position: relative;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+.step-num {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .recovery-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+.disclaimer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.disclaimer-card {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.disclaimer-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .disclaimer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.margin-top-large {
+    margin-top: 3rem;
 }

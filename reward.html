@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards & Potential - Aegis Grid Algo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <header class="glass-header">
+        <nav class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Aegis Grid Algo <span
+                    style="font-weight:400; font-size: 0.8em; color: var(--text-muted);">By BCB Elevate</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reward.html" class="active">Rewards</a></li>
+                <li><a href="risk.html">Risks</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Reward Hero -->
+    <section class="reward-hero">
+        <div class="container hero-content">
+            <span class="badge badge-success fade-in">Uncapped Potential</span>
+            <h1 class="fade-in delay-1">Unlock Daily <span class="gradient-text">Profits</span></h1>
+            <p class="fade-in delay-2">Experience consistent growth designed to deliver results every single trading
+                day.</p>
+        </div>
+    </section>
+
+    <!-- Profit Highlights -->
+    <section class="reward-details-section">
+        <div class="container">
+            <div class="features-grid fade-in delay-3">
+                <div class="feature-card glass-card">
+                    <div class="icon">💸</div>
+                    <h3>Daily Target</h3>
+                    <p>Aim for <strong>1% - 5%</strong> in profit every day, depending on your capital and market
+                        conditions.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">🚀</div>
+                    <h3>Fast Growth</h3>
+                    <p>Compound your earnings or withdraw daily. The choice is yours.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon">💬</div>
+                    <h3>Quick Support</h3>
+                    <p>Got questions? Get instant answers via our dedicated support team on <strong>WhatsApp</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Potential Returns Calculator -->
+    <section class="calculator-section fade-in delay-4">
+        <div class="container">
+            <div class="calculator-card glass-card-large">
+                <h2 class="calc-title">Calculate Your Potential</h2>
+                <p class="calc-subtitle">See exactly what you could earn based on verified performance</p>
+
+                <div class="calc-modes">
+                    <button class="mode-btn" data-mode="flip" onclick="selectMode('flip')">
+                        <span class="mode-icon">⚡</span>
+                        <div class="mode-info">
+                            <strong>Flip Mode</strong>
+                            <span>Extreme Risk • 1-3 Day Flip</span>
+                        </div>
+                    </button>
+                    <button class="mode-btn" data-mode="aggressive" onclick="selectMode('aggressive')">
+                        <span class="mode-icon">🚀</span>
+                        <div class="mode-info">
+                            <strong>Aggressive Growth</strong>
+                            <span>Medium Risk • Fixed Capital</span>
+                        </div>
+                    </button>
+                    <button class="mode-btn active" data-mode="safe" onclick="selectMode('safe')">
+                        <span class="mode-icon">🛡️</span>
+                        <div class="mode-info">
+                            <strong>Safe Steady</strong>
+                            <span>Low Risk • Scalable</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="calc-input-area">
+                    <div class="input-header">
+                        <label>Starting Deposit</label>
+                        <span class="deposit-display" id="deposit-display">$1,000</span>
+                    </div>
+                    <input type="range" id="capital-slider" min="1000" max="50000" step="1000" value="1000"
+                        class="calc-slider">
+                    <div class="slider-labels">
+                        <span id="min-label">$1,000</span>
+                        <span id="max-label">$50,000</span>
+                    </div>
+                </div>
+
+                <div class="calc-results-box">
+                    <div class="result-row">
+                        <span>Hourly Net Profit</span>
+                        <strong id="hourly-profit">$1.23</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Daily Net Profit (22h)</span>
+                        <strong id="daily-profit">$27.10</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Weekly Net Profit (5 Days)</span>
+                        <strong id="weekly-profit">$135.52</strong>
+                    </div>
+
+                    <!-- Breakdown Section -->
+                    <div class="breakdown-divider"></div>
+                    <div class="result-row compact">
+                        <span>Monthly Gross Profit</span>
+                        <strong id="monthly-gross">$745.36</strong>
+                    </div>
+                    <div class="result-row compact deduction">
+                        <span>20% Profit Share</span>
+                        <strong id="monthly-deduction">-$149.07</strong>
+                    </div>
+                    <div class="result-row highlight">
+                        <span>Monthly Net Profit</span>
+                        <strong id="monthly-net">$596.29</strong>
+                    </div>
+                    <p class="disclaimer">Values shown are <strong>Net Profit</strong> after deducting 20% profit share.
+                    </p>
+                </div>
+            </div>
+
+            <div class="action-area center-text margin-top-large">
+                <p>Ready to start earning?</p>
+                <a href="#pricing" class="btn btn-primary" onclick="window.location.href='pricing.html'">Get Access
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Aegis Grid Algo</h3>
+                <p>Automated trading solutions by BCB Elevate.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="http://wa.me/918848063402" target="_blank">WhatsApp Support</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Have questions? Reach out directly.</p>
+                <a href="http://wa.me/918848063402" target="_blank" class="btn btn-secondary whatsapp-btn">
+                    <img src="whatsapp-logo.png" alt="WhatsApp" class="btn-icon"> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aegis Grid Algo By BCB Elevate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
