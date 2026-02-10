@@ -210,29 +210,21 @@ header nav {
     margin: 0 auto 2.5rem;
 }
 
-.text-3d {
+.text-premium {
     display: inline-block;
-    color: #2563eb;
+    background: linear-gradient(to right, #2563eb, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 800;
-    text-shadow:
-        0 1px 0 #1e40af,
-        0 2px 0 #1e40af,
-        0 3px 0 #1e40af,
-        0 4px 0 #1e40af,
-        0 5px 10px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.4));
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
 
-.text-3d:hover {
+.text-premium:hover {
     transform: translateY(-4px);
-    text-shadow:
-        0 1px 0 #1e40af,
-        0 2px 0 #1e40af,
-        0 3px 0 #1e40af,
-        0 4px 0 #1e40af,
-        0 6px 0 #1e40af,
-        0 8px 15px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 0 25px rgba(37, 99, 235, 0.6));
 }
 
 .hero-buttons {
@@ -2864,4 +2856,171 @@ footer {
 
 .margin-top-large {
     margin-top: 3rem;
+}
+
+/* Gold Showcase Section - Light Premium Theme */
+.gold-showcase-section {
+    padding: 120px 0;
+    /* Background removed to blend with global theme */
+    position: relative;
+    overflow: hidden;
+    color: #1a1a1a;
+}
+
+.gold-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .gold-showcase-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+}
+
+.gold-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 32px;
+    padding: 3.5rem;
+    box-shadow:
+        0 20px 50px rgba(245, 158, 11, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.8) inset;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gold-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+/* Typography Overrides */
+.gold-card .section-title {
+    color: #1a1a1a !important;
+    /* Force dark text for light mode */
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.gold-card p {
+    color: #52525b !important;
+    /* Slate-600 */
+    font-weight: 500;
+}
+
+.text-gold-gradient {
+    background: linear-gradient(135deg, #b45309 0%, #d97706 40%, #fbbf24 100%);
+    /* Richer Gold for White BG */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.2));
+}
+
+.gold-stat {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 2rem;
+}
+
+.stat-item h4 {
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(135deg, #b45309, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.stat-item p {
+    margin: 0.5rem 0 0;
+    color: #71717a !important;
+    /* Slate-500 */
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600 !important;
+}
+
+/* Visuals */
+.gold-visual-container {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.center-gold-icon {
+    width: 280px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(245, 158, 11, 0.3));
+    animation: float-gold 6s ease-in-out infinite;
+    z-index: 2;
+    /* Removed font-size since we will use an image */
+}
+
+.orbit-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.2));
+    animation: orbit-gold 15s linear infinite;
+    background: white;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.orbit-1 {
+    top: 15%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.orbit-2 {
+    bottom: 25%;
+    right: 15%;
+    animation-delay: -5s;
+}
+
+.orbit-3 {
+    top: 40%;
+    right: 10%;
+    animation-delay: -10s;
+    font-size: 1.8rem;
+}
+
+@keyframes float-gold {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(2deg);
+    }
+}
+
+@keyframes orbit-gold {
+    0% {
+        transform: rotate(0deg) translateX(180px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(180px) rotate(-360deg);
+    }
 }
