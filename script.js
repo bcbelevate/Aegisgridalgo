@@ -226,7 +226,7 @@ if (helpSearchInput) {
 // --- Profit Calculator Logic ---
 const agressiveProfitPerHour = 0.51; // Fixed for $100 ($0.51/hr)
 const flipProfitPerHour = 4.20; // Fixed for $100 Flip Mode
-const safeProfitPerHourBase = 1.54; // Per $1000
+const safeProfitPerHourBase = 0.81; // Per $1000 (Based on $1.62 at $2000)
 let currentMode = 'safe'; // Default
 
 function selectMode(mode) {
