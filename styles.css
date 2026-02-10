@@ -66,20 +66,32 @@ body {
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    border: none;
+    /* Explicitly remove border */
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.3px;
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #2563eb 0%, #1744c9 100%);
     color: white;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    box-shadow:
+        0 4px 15px rgba(37, 99, 235, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        /* Glass top edge */
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    /* Subtle inner border */
 }
 
 .btn-primary:hover {
-    background: var(--primary-hover);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary {
@@ -196,6 +208,31 @@ header nav {
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto 2.5rem;
+}
+
+.text-3d {
+    display: inline-block;
+    color: #2563eb;
+    font-weight: 800;
+    text-shadow:
+        0 1px 0 #1e40af,
+        0 2px 0 #1e40af,
+        0 3px 0 #1e40af,
+        0 4px 0 #1e40af,
+        0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.text-3d:hover {
+    transform: translateY(-4px);
+    text-shadow:
+        0 1px 0 #1e40af,
+        0 2px 0 #1e40af,
+        0 3px 0 #1e40af,
+        0 4px 0 #1e40af,
+        0 6px 0 #1e40af,
+        0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons {
