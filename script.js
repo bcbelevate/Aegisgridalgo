@@ -224,7 +224,7 @@ if (helpSearchInput) {
 
 
 // --- Profit Calculator Logic ---
-const agressiveProfitPerHour = 1.12; // Fixed for $100
+const agressiveProfitPerHour = 0.51; // Fixed for $100 ($0.51/hr)
 const flipProfitPerHour = 4.20; // Fixed for $100 Flip Mode
 const safeProfitPerHourBase = 1.54; // Per $1000
 let currentMode = 'safe'; // Default
@@ -254,12 +254,12 @@ function selectMode(mode) {
         depositLabelMax.textContent = '$100';
     } else {
         slider.disabled = false;
-        slider.min = 1000;
+        slider.min = 2000;
         slider.max = 50000;
         slider.step = 1000;
-        slider.value = 1000;
-        depositDisplay.textContent = '$1,000';
-        depositLabelMin.textContent = '$1,000';
+        slider.value = 2000;
+        depositDisplay.textContent = '$2,000';
+        depositLabelMin.textContent = '$2,000';
         depositLabelMax.textContent = '$50,000';
     }
     calculateProfit();
