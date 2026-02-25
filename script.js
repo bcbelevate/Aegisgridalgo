@@ -224,7 +224,7 @@ if (helpSearchInput) {
 
 
 // --- Profit Calculator Logic ---
-const agressiveProfitPerHour = 0.51; // Fixed for $100 ($0.51/hr)
+const agressiveProfitPerHourBase = 1.14; // Per $1000 for Infinity Mode (approx 2.5% daily avg)
 const flipProfitPerHour = 4.20; // Fixed for $100 Flip Mode
 const safeProfitPerHourBase = 0.81; // Per $1000 (Based on $1.62 at $2000)
 let currentMode = 'safe'; // Default
@@ -241,11 +241,14 @@ function selectMode(mode) {
     document.querySelector(`[data-mode='${mode}']`).classList.add('active');
 
     if (mode === 'aggressive') {
-        slider.disabled = true;
-        slider.value = 100;
-        depositDisplay.textContent = '$100 (Fixed)';
-        depositLabelMin.textContent = '$100';
-        depositLabelMax.textContent = '$100';
+        slider.disabled = false;
+        slider.min = 1000;
+        slider.max = 50000;
+        slider.step = 1000;
+        slider.value = 1000;
+        depositDisplay.textContent = '$1,000';
+        depositLabelMin.textContent = '$1,000';
+        depositLabelMax.textContent = '$50,000';
     } else if (mode === 'flip') {
         slider.disabled = true;
         slider.value = 100;
@@ -254,12 +257,12 @@ function selectMode(mode) {
         depositLabelMax.textContent = '$100';
     } else {
         slider.disabled = false;
-        slider.min = 2000;
+        slider.min = 1000;
         slider.max = 50000;
         slider.step = 1000;
-        slider.value = 2000;
-        depositDisplay.textContent = '$2,000';
-        depositLabelMin.textContent = '$2,000';
+        slider.value = 1000;
+        depositDisplay.textContent = '$1,000';
+        depositLabelMin.textContent = '$1,000';
         depositLabelMax.textContent = '$50,000';
     }
     calculateProfit();
@@ -277,8 +280,9 @@ function calculateProfit() {
     let hourlyProfit = 0;
 
     if (currentMode === 'aggressive') {
-        capital = 100;
-        hourlyProfit = agressiveProfitPerHour;
+        // Infinity Mode scaling (Min $1000)
+        hourlyProfit = (capital / 1000) * agressiveProfitPerHourBase;
+        depositDisplay.textContent = '$' + capital.toLocaleString();
     } else if (currentMode === 'flip') {
         capital = 100;
         hourlyProfit = flipProfitPerHour;
